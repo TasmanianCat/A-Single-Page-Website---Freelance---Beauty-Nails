@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="ru" translate="no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Лучшая парикмахерская в вашем городе." />
+    <meta
+      name="keywords"
+      content="парикмахерская, стрижка, салон красоты, услуги красоты"
+    />
+    <meta name="author" content="Название салона" />
+    <!-- For socials -->
+    <meta property="og:title" content="Парикмахерская «Елена»" />
+    <meta
+      property="og:description"
+      content="Лучшая парикмахерская в вашем городе."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://beautysalon.serbulatov.space" />
+    <meta
+      property="og:image"
+      content="https://beautysalon.serbulatov.space/img/preview.jpg"
+    />
+    <!-- Links -->
+    <link
+      rel="preload"
+      href="./fonts/GreatVibes-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="preload" href="css/style-dist.css" as="style" />
+    <link rel="stylesheet" href="css/style-dist.css" />
+    <!-- <link rel="preload" href="css/style.css" as="style" />
+    <link rel="stylesheet" href="css/style.css" /> -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <title>Одностроничный сайт (Образец)</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <!-- Navigation -->
+      <div class="nav__compensator" id="navWrapperCompensator">
+        <div class="nav-wrapper">
+          <nav class="nav">
+            <div class="nav__logo">
+              <a
+                class="nav__logo-link nav__logo-link--animated"
+                href="index.html"
+                >Парикмахерская "Название"</a
+              >
+            </div>
+            <ul class="nav__links" id="navLinks">
+              <li class="nav__close-menu-btn" id="closeMenuBtn">
+                <img
+                  class="nav__close-menu-btn-icon"
+                  src="img/close-menu-button.svg"
+                  alt="Close Menu Button"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </li>
+              <li class="nav__link"><a href="#about">О нас</a></li>
+              <li class="nav__link"><a href="#services">Услуги</a></li>
+              <li class="nav__link"><a href="#price">Цены</a></li>
+              <li class="nav__link"><a href="#contact">Контакты</a></li>
+            </ul>
+            <div class="nav__open-menu-btn" id="openMenuBtn">
+              <img
+                class="nav__open-menu-btn-icon"
+                src="img/menu-icon.svg"
+                alt="Menu Button"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+          </nav>
+        </div>
+      </div>
+      <!-- Hero -->
+      <div class="hero">
+        <picture class="hero__image-wrapper">
+          <source
+            srcset="img/hero_small.webp 1x, img/hero.webp 2x"
+            media="(max-width: 37.5em)"
+            type="image/webp"
+          />
+          <img
+            class="hero__image"
+            src="img/hero.webp"
+            alt="Hero Image"
+            decoding="async"
+          />
+        </picture>
+        <div class="hero__content">
+          <h1 class="hero__content-heading">Позаботьтесь о своей внешности</h1>
+          <p class="hero__content-text">Подчеркнем вашу естественную красоту</p>
+          <a href="#contact" class="button button--hero">Записаться</a>
+        </div>
+      </div>
+    </header>
+    <!-- Main -->
+    <main class="main">
+      <!-- Running string -->
+      <div class="main__section-wrapper">
+        <section class="main__section">
+          <div class="marquee marquee--light">
+            <div class="marquee__track">
+              <div class="marquee__group">
+                <span class="marquee__item">Женские и мужские стрижки</span>
+                <span class="marquee__sep">•</span>
+                <span class="marquee__item">Окрашивание волос</span>
+                <span class="marquee__sep">•</span>
+                <span class="marquee__item">Осветление волос</span>
+                <span class="marquee__sep">•</span>
+                <span class="marquee__item">Прически для особых случаев</span>
+                <span class="marquee__sep">•</span>
+                <span class="marquee__item">Профессиональная косметика</span>
+                <span class="marquee__sep">•</span>
+                <span class="marquee__item">Восстанавливающие процедуры</span>
+                <span class="marquee__sep">•</span>
+              </div>
+
+              <!-- second duplicated group (needed for seamless loop) -->
+              <div class="marquee__group" aria-hidden="true">
+                <span class="marquee__item">Женские и мужские стрижки</span>
+                <span class="marquee__sep">•</span>
+                <span class="marquee__item">Окрашивание волос</span>
+                <span class="marquee__sep">•</span>
+                <span class="marquee__item">Осветление волос</span>
+                <span class="marquee__sep">•</span>
+                <span class="marquee__item">Прически для особых случаев</span>
+                <span class="marquee__sep">•</span>
+                <span class="marquee__item">Профессиональная косметика</span>
+                <span class="marquee__sep">•</span>
+                <span class="marquee__item">Восстанавливающие процедуры</span>
+                <span class="marquee__sep">•</span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <!-- Main content -->
+      <!-- Home/About block -->
+      <div
+        id="about"
+        class="main__content-wrapper main__content-wrapper--bg-image"
+      >
+        <div class="main__content">
+          <h2>О нас</h2>
+          <div class="main__content-about">
+            <p>
+              К вашим услугам наш дружелюбный персонал с более чем 12-летним
+              опытом работы в сфере парикмахерского искусства. Понимаем,
+              насколько важны ваши волосы, их здоровье и красота, поэтому
+              предоставляем все парикмахерские услуги высочайшего качества.
+            </p>
+            <h2>Подчеркиваем вашу красоту</h2>
+            <p>
+              В салоне красоты Rose мы специализируемся на предоставлении
+              индивидуальных услуг профессионального парикмахерского искусства,
+              которые помогут вам чувствовать себя уверенно, безупречно и быть
+              готовыми к любому событию. Ищете ли вы шикарный повседневный образ
+              или гламурный образ для особого случая, наши талантливые стилисты
+              создадут для вас уникальный образ.
+            </p>
+            <p>
+              Сможем уложить ваши волосы в любом стиле, так что приходите к нам
+              с идеей, фотографией или просто позвольте нам импровизировать. Мы
+              не просто делаем прически — мы создаём впечатления.
+            </p>
+            <p>Мы с нетерпением ждём встречи с вами!</p>
+          </div>
+        </div>
+      </div>
+      <!-- Services block -->
+      <div id="services" class="main__content-wrapper">
+        <div class="main__content">
+          <h2>Услуги</h2>
+          <div class="main__content-services">
+            <!-- Card 1 -->
+            <div class="main__content-services-card">
+              <div class="main__content-services-card-image-wrapper">
+                <img
+                  class="main__content-services-card-image"
+                  src="img/haircuts/service-1.webp"
+                  alt="Женские стрижки"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="main__content-services-card-text-wrapper">
+                <h3 class="main__content-services-card-heading">
+                  Женские стрижки
+                </h3>
+                <p>
+                  От классических стрижек до последних трендов - наша команда
+                  всегда в курсе передовых техник, чтобы ваша стрижка была
+                  современной и стильной.
+                </p>
+              </div>
+              <div class="main__content-services-card-button-wrapper">
+                <a href="#contact" class="button">Записаться</a>
+              </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="main__content-services-card">
+              <div class="main__content-services-card-image-wrapper">
+                <img
+                  class="main__content-services-card-image"
+                  src="img/haircuts/service-2.webp"
+                  alt="Мужские стрижки"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="main__content-services-card-text-wrapper">
+                <h3 class="main__content-services-card-heading">
+                  Мужские стрижки
+                </h3>
+                <p>
+                  От классических форм до современных трендов - наши мастера
+                  владеют передовыми техниками, чтобы каждая стрижка выглядела
+                  стильно и подчеркивала ваш характер.
+                </p>
+              </div>
+              <div class="main__content-services-card-button-wrapper">
+                <a href="#contact" class="button">Записаться</a>
+              </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="main__content-services-card">
+              <div class="main__content-services-card-image-wrapper">
+                <img
+                  class="main__content-services-card-image"
+                  src="img/haircuts/service-3.webp"
+                  alt="Детские стрижки"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="main__content-services-card-text-wrapper">
+                <h3 class="main__content-services-card-heading">
+                  Детские стрижки
+                </h3>
+                <p>
+                  Стрижка для ребёнка - это не просто уход за волосами, а ещё и
+                  приятные эмоции. Наши мастера умеют находить подход к каждому
+                  малышу, создавая атмосферу комфорта и доверия.
+                </p>
+              </div>
+              <div class="main__content-services-card-button-wrapper">
+                <a href="#contact" class="button">Записаться</a>
+              </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="main__content-services-card">
+              <div class="main__content-services-card-image-wrapper">
+                <img
+                  class="main__content-services-card-image"
+                  src="img/haircuts/service-4.webp"
+                  alt="Окрашивание волос"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="main__content-services-card-text-wrapper">
+                <h3 class="main__content-services-card-heading">
+                  Окрашивание волос
+                </h3>
+                <p>
+                  Будь то лёгкое обновление оттенка или кардинальное
+                  преображение - наши мастера подберут идеальный цвет, который
+                  подчеркнёт вашу индивидуальность и естественную красоту.
+                </p>
+              </div>
+              <div class="main__content-services-card-button-wrapper">
+                <a href="#contact" class="button">Записаться</a>
+              </div>
+            </div>
+            <!-- Card 5 -->
+            <div class="main__content-services-card">
+              <div class="main__content-services-card-image-wrapper">
+                <img
+                  class="main__content-services-card-image"
+                  src="img/haircuts/service-5.webp"
+                  alt="Осветление волос"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="main__content-services-card-text-wrapper">
+                <h3 class="main__content-services-card-heading">
+                  Осветление волос
+                </h3>
+                <p>
+                  Осветление - это первый шаг к созданию модного блонд-образа
+                  или яркого цветового акцента. Наши мастера используют
+                  современные, щадящие техники и профессиональные средства,
+                  чтобы сохранить здоровье и блеск ваших волос.
+                </p>
+              </div>
+              <div class="main__content-services-card-button-wrapper">
+                <a href="#contact" class="button">Записаться</a>
+              </div>
+            </div>
+            <!-- Card 6 -->
+            <div class="main__content-services-card">
+              <div class="main__content-services-card-image-wrapper">
+                <img
+                  class="main__content-services-card-image"
+                  src="img/haircuts/service-6.webp"
+                  alt="Красивые прически"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="main__content-services-card-text-wrapper">
+                <h3 class="main__content-services-card-heading">
+                  Красивые прически
+                </h3>
+                <p>
+                  Сможем уложить ваши волосы в любом стиле, так что приходите к
+                  нам с идеей, фотографией или просто позвольте нам
+                  импровизировать. Мы не просто делаем прически — мы создаём
+                  впечатления.
+                </p>
+              </div>
+
+              <div class="main__content-services-card-button-wrapper">
+                <a href="#contact" class="button">Записаться</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Price block -->
+      <div
+        id="price"
+        class="main__content-wrapper main__content-wrapper--bg-image"
+      >
+        <div class="main__content">
+          <h2>Цены на услуги</h2>
+          <div class="main__content-price">
+            <!-- Price list 1 -->
+            <div class="main__content-price-list">
+              <h3 class="main__content-price-list-heading">
+                Стрижки и прически
+              </h3>
+              <ul class="main__content-price-list-item">
+                <!-- Service price 1 -->
+                <li class="main__content-price-list-item-details">
+                  <span class="main__content-price-list-item-name"
+                    >Женская стрижка</span
+                  >
+                  <div class="main__content-price-list-item-price-container">
+                    <span class="main__content-price-list-item-price-starting"
+                      >от</span
+                    >
+                    <div
+                      class="main__content-price-list-item-price-icon-wrapper"
+                    >
+                      <img
+                        class="main__content-price-list-item-price-icon"
+                        src="img/ruble-icon.svg"
+                        alt="A Dollar Sign"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </div>
+                    <span class="main__content-price-list-item-price-figure"
+                      >1200</span
+                    >
+                  </div>
+                </li>
+                <!-- Service price 2 -->
+                <li class="main__content-price-list-item-details">
+                  <span class="main__content-price-list-item-name"
+                    >Мужская стрижка</span
+                  >
+                  <div class="main__content-price-list-item-price-container">
+                    <span class="main__content-price-list-item-price-starting"
+                      >от</span
+                    >
+                    <div
+                      class="main__content-price-list-item-price-icon-wrapper"
+                    >
+                      <img
+                        class="main__content-price-list-item-price-icon"
+                        src="img/ruble-icon.svg"
+                        alt="A Dollar Sign"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </div>
+                    <span class="main__content-price-list-item-price-figure"
+                      >1100</span
+                    >
+                  </div>
+                </li>
+                <!-- Service price 3 -->
+                <li class="main__content-price-list-item-details">
+                  <span class="main__content-price-list-item-name"
+                    >Детская стрижка</span
+                  >
+                  <div class="main__content-price-list-item-price-container">
+                    <span class="main__content-price-list-item-price-starting"
+                      >от</span
+                    >
+                    <div
+                      class="main__content-price-list-item-price-icon-wrapper"
+                    >
+                      <img
+                        class="main__content-price-list-item-price-icon"
+                        src="img/ruble-icon.svg"
+                        alt="A Dollar Sign"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </div>
+                    <span class="main__content-price-list-item-price-figure"
+                      >700</span
+                    >
+                  </div>
+                </li>
+                <!-- Service price 4 -->
+                <li class="main__content-price-list-item-details">
+                  <span class="main__content-price-list-item-name"
+                    >Прически</span
+                  >
+                  <div class="main__content-price-list-item-price-container">
+                    <span class="main__content-price-list-item-price-starting"
+                      >от</span
+                    >
+                    <div
+                      class="main__content-price-list-item-price-icon-wrapper"
+                    >
+                      <img
+                        class="main__content-price-list-item-price-icon"
+                        src="img/ruble-icon.svg"
+                        alt="A Dollar Sign"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </div>
+                    <span class="main__content-price-list-item-price-figure"
+                      >1800</span
+                    >
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <!-- Price list 2 -->
+            <div class="main__content-price-list">
+              <h3 class="main__content-price-list-heading">
+                Услуги окрашивания
+              </h3>
+              <ul class="main__content-price-list-item">
+                <!-- Service price 1 -->
+                <li class="main__content-price-list-item-details">
+                  <span class="main__content-price-list-item-name"
+                    >Однотонное окрашивание</span
+                  >
+                  <div class="main__content-price-list-item-price-container">
+                    <span class="main__content-price-list-item-price-starting"
+                      >от</span
+                    >
+                    <div
+                      class="main__content-price-list-item-price-icon-wrapper"
+                    >
+                      <img
+                        class="main__content-price-list-item-price-icon"
+                        src="img/ruble-icon.svg"
+                        alt="A Dollar Sign"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </div>
+                    <span class="main__content-price-list-item-price-figure"
+                      >2100</span
+                    >
+                  </div>
+                </li>
+                <!-- Service price 2 -->
+                <li class="main__content-price-list-item-details">
+                  <span class="main__content-price-list-item-name"
+                    >Осветление волос</span
+                  >
+                  <div class="main__content-price-list-item-price-container">
+                    <span class="main__content-price-list-item-price-starting"
+                      >от</span
+                    >
+                    <div
+                      class="main__content-price-list-item-price-icon-wrapper"
+                    >
+                      <img
+                        class="main__content-price-list-item-price-icon"
+                        src="img/ruble-icon.svg"
+                        alt="A Dollar Sign"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </div>
+                    <span class="main__content-price-list-item-price-figure"
+                      >1300</span
+                    >
+                  </div>
+                </li>
+                <!-- Service price 3 -->
+                <li class="main__content-price-list-item-details">
+                  <span class="main__content-price-list-item-name"
+                    >Мелирование волос</span
+                  >
+                  <div class="main__content-price-list-item-price-container">
+                    <span class="main__content-price-list-item-price-starting"
+                      >от</span
+                    >
+                    <div
+                      class="main__content-price-list-item-price-icon-wrapper"
+                    >
+                      <img
+                        class="main__content-price-list-item-price-icon"
+                        src="img/ruble-icon.svg"
+                        alt="A Dollar Sign"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </div>
+                    <span class="main__content-price-list-item-price-figure"
+                      >1700</span
+                    >
+                  </div>
+                </li>
+                <!-- Service price 4 -->
+                <li class="main__content-price-list-item-details">
+                  <span class="main__content-price-list-item-name"
+                    >Тонирование волос</span
+                  >
+                  <div class="main__content-price-list-item-price-container">
+                    <span class="main__content-price-list-item-price-starting"
+                      >от</span
+                    >
+                    <div
+                      class="main__content-price-list-item-price-icon-wrapper"
+                    >
+                      <img
+                        class="main__content-price-list-item-price-icon"
+                        src="img/ruble-icon.svg"
+                        alt="A Dollar Sign"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </div>
+                    <span class="main__content-price-list-item-price-figure"
+                      >1800</span
+                    >
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Contact Us block -->
+      <div id="contact" class="main__content-wrapper">
+        <div class="main__content">
+          <h2>Контакты</h2>
+          <div class="main__content-contact">
+            <div class="main__content-contact-info">
+              <h3 class="main__content-contact-info-heading">
+                Запишитесь для получения услуг, позвонив нам или отправив
+                сообщение в мессенджере.
+              </h3>
+              <p class="main__content-contact-info-text">
+                Звоните:
+                <a
+                  class="main__content-contact-info-text-link main__content-contact-info-text-link--bold"
+                  href="tel:+tel:+7000000000"
+                  >+7 (000) 000 0000</a
+                >.
+              </p>
+              <p class="main__content-contact-info-text">
+                Пишите в
+                <span class="main__content-contact-info-text-span"
+                  ><a
+                    class="main__content-contact-info-text-link"
+                    href="https://wa.me/7000000000"
+                    >WhatsApp</a
+                  ></span
+                >
+                /
+                <span class="main__content-contact-info-text-span"
+                  ><a
+                    class="main__content-contact-info-text-link"
+                    href="https://t.me/+7000000000"
+                    >Telegram</a
+                  ></span
+                >.
+              </p>
+              <p class="main__content-contact-info-text">
+                Вступайте в наше сообщество в
+                <span class="main__content-contact-info-text-span"
+                  ><a
+                    class="main__content-contact-info-text-link"
+                    title="ВКонтакте"
+                    href="https://vk.com/"
+                    >VK</a
+                  ></span
+                >.
+              </p>
+              <h3 class="main__content-contact-info-heading">Наш адрес:</h3>
+              <p class="main__content-contact-info-text">
+                Город Красноярск, проспект Мира, дом №85, подъезд №.
+              </p>
+              <h3 class="main__content-contact-info-heading">График работы:</h3>
+              <p class="main__content-contact-info-text">
+                Рабочие дни с понедельника по субботу. Воскресенье - выходной
+                день.
+              </p>
+              <p class="main__content-contact-info-text">
+                Рабочие часы будние дни: с 09:00 ч. до 19:00 ч.; в Субботу с
+                09:30 ч. до 16:00 ч.
+              </p>
+            </div>
+            <div class="main__content-contact-map-wrapper">
+              <iframe
+                title="Карта"
+                class="main__content-contact-map lazyload--js"
+                src="https://yandex.ru/map-widget/v1/?um=constructor%3A624f5ae854472245dcb5e6c559e692c0edbf5dc4c14d45689343cc01b7e42d39&amp;source=constructor"
+                width="100%"
+                height="100%"
+                frameborder="0"
+                loading="lazy"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer__content">
+        <p class="footer__content-text">© 2025, Парикмахерская "Название"</p>
+      </div>
+    </footer>
+    <a class="go-up-btn" id="upBtn" onclick="goUpFunction()">
+      <svg
+        class="arrow-up"
+        xmlns="http://www.w3.org/2000/svg"
+        height="30px"
+        viewBox="0 -960 960 960"
+        width="30px"
+        fill="#ffffff"
+      >
+        <path
+          d="M440-160v-487L216-423l-56-57 320-320 320 320-56 57-224-224v487h-80Z"
+        ></path>
+      </svg>
+    </a>
+    <script type="module" src="js/main-dist.js"></script>
+    <!-- <script type="module" src="js/main.js"></script> -->
+  </body>
+</html>
