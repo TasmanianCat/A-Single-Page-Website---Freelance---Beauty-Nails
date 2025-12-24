@@ -156,10 +156,15 @@ body {
   --marquee-gap: 2rem;
   --marquee-font-size: 1.125rem;
   --marquee-speed: 30s;
-  --color-primary: rgb(244, 37, 175);
-  --color-primary-hover: rgb(134, 19, 96);
-  /* --color-primary: #dd1136;
-  --color-primary-hover: #b20b29; */
+  /* --color-primary: rgb(244, 37, 175);
+  --color-primary-hover: rgb(134, 19, 96); */
+  --color-primary: rgb(196, 156, 72);
+  --color-primary-hover: rgb(192, 142, 35);
+  --bg-color-primary: linear-gradient(
+    0.375turn,
+    rgb(222 181 93) 0%,
+    rgba(145, 104, 19, 1) 99%
+  );
 }
 
 /* NAVIGATION */
@@ -167,6 +172,8 @@ body {
 .nav__compensator {
   width: 100%;
   height: auto; /* JS sets fixed height ONCE */
+  background: linear-gradient(15deg, #0a0a0a, #131313, #0a0a0a);
+  transition: all 0.5s ease-in-out;
 }
 
 /* NORMAL NAV */
@@ -175,14 +182,12 @@ body {
   align-items: center;
   justify-content: center;
   width: 100%;
-
-  background-color: rgba(255, 255, 255, 0); /* Transparent before sticky */
+  background: linear-gradient(15deg, #0a0a0a, #131313, #0a0a0a);
   backdrop-filter: none;
-  transition: background-color 0.35s ease, backdrop-filter 0.35s ease,
-    transform 0.35s ease, opacity 0.35s ease;
+  transition: all 0.35s ease; /* Simplified transition */
 }
 
-/* STICKY NAV (fade, slide, blur) */
+/* STICKY NAV - IMPROVED VISIBILITY */
 .nav__wrapper--sticky {
   position: fixed;
   top: 0;
@@ -190,11 +195,16 @@ body {
   width: 100%;
   z-index: 998;
 
-  background-color: rgba(255, 255, 255, 0.85); /* Fade-in bg */
-  backdrop-filter: blur(4px); /* Background blur */
+  /* Lighter background with LESS opacity for better blur effect */
+  background: rgba(30, 30, 30, 0.9); /* Changed: lighter gray, less opacity */
 
-  opacity: 0.75;
-  transform: translateY(-20px);
+  /* Single backdrop-filter declaration */
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+
+  /* Visual enhancements */
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 /* When fully activated (after 1 frame) */
@@ -225,7 +235,7 @@ body {
 .nav-wrapper * a {
   font-family: inherit;
   font-size: 1rem;
-  color: rgb(45, 45, 45);
+  color: rgb(233, 233, 233);
 }
 
 .nav__logo {
@@ -278,7 +288,7 @@ body {
 }
 
 .nav__link a {
-  transition: opacity 0.25s ease-in-out;
+  transition: opacity 0.25s ease-in-out, color 0.25s ease-in-out;
 }
 
 .nav__link a:hover {
@@ -325,7 +335,13 @@ body {
     min-height: 100dvh;
     height: auto;
     padding: 0 1.5rem 2.5rem 1.5rem;
-    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+    background-image: linear-gradient(
+      0turn,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(50, 50, 50, 1) 0%,
+      rgba(28, 28, 28, 1) 0%,
+      rgba(63, 63, 63, 1) 100%
+    );
     opacity: 0;
     transition: right 0.4s ease-in-out, opacity 0.25s ease;
 
@@ -358,12 +374,12 @@ body {
   overflow: hidden;
   position: relative;
   background-image: linear-gradient(
-    to right top,
-    #141314,
-    #161116,
-    #180e18,
-    #1a0b19,
-    #1c081b
+    37deg,
+    #0a0a0a 0%,
+    #111111 25%,
+    #1a1a1a 50%,
+    #111111 75%,
+    #0a0a0a 100%
   );
 
   @media (orientation: landscape) and (max-height: 600px) {
@@ -511,7 +527,7 @@ p:not(:last-child) {
   display: inline-block;
   position: relative;
   border-radius: 50px;
-  background-color: var(--color-primary);
+  background-image: var(--bg-color-primary);
   height: 50px;
   position: relative;
   font-family: 'Montserrat';
@@ -525,14 +541,14 @@ p:not(:last-child) {
   box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px;
   text-align: center;
   margin: 0 auto;
-  -webkit-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  transition: all 0.5s;
+  -webkit-transition: opacity 0.5s;
+  -o-transition: opacity0.5s;
+  transition: opacity 0.5s;
   text-transform: uppercase;
 }
 
 .button:hover {
-  background-color: var(--color-primary-hover);
+  opacity: 0.85;
 }
 
 .button--hero {
@@ -546,11 +562,12 @@ p:not(:last-child) {
   width: 100%;
   padding: 1rem 0;
   overflow: hidden;
+
   background: linear-gradient(
     90deg,
-    rgba(251, 207, 232, 0.5),
-    rgba(216, 185, 255, 0.5),
-    rgba(251, 207, 232, 0.5)
+    rgba(222, 181, 93, 0.1) 0%,
+    rgba(145, 104, 19, 0.15) 50%,
+    rgba(222, 181, 93, 0.1) 100%
   );
   display: flex;
   align-items: center;
@@ -620,12 +637,13 @@ p:not(:last-child) {
 
 .main__content-wrapper--bg-image,
 .footer {
-  background-image: radial-gradient(73% 147%, #eadfdf 59%, #ece2df 100%),
-    radial-gradient(
-      91% 146%,
-      rgba(255, 255, 255, 0.5) 47%,
-      rgba(0, 0, 0, 0.5) 100%
-    );
+  background-image: linear-gradient(
+    0.143turn,
+    rgba(232, 232, 232, 1) 0%,
+    rgba(237, 237, 237, 1) 16%,
+    rgba(243, 243, 243, 1) 72%,
+    rgba(255, 255, 255, 1) 100%
+  );
   background-blend-mode: screen;
 }
 
